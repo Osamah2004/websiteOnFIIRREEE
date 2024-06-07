@@ -1,5 +1,3 @@
-const canvas = document.querySelector('#confetti');
-
 const jsConfetti = new JSConfetti();
 
 function sleep(ms) {
@@ -7,12 +5,13 @@ function sleep(ms) {
 }
 
 async function exampleFunction() {
-
     for (let i = 0; i < 5; i++) {
-        jsConfetti.addConfetti()
+        jsConfetti.addConfetti();
         await sleep(200);
     }
+    typeWriterEffect('!!!الف مبروك عالتخرج دكتور حمزة!!!'); // Call typeWriterEffect after exampleFunction
 }
+
 function createFirework() {
     const firework = document.createElement('div');
     firework.classList.add('firework');
@@ -50,6 +49,7 @@ function startFireworks() {
     const randomInterval = Math.random() * (600 - 100) + 100;
     setTimeout(startFireworks, randomInterval);
 }
+
 function typeWriterEffect(text) {
     let typewriterElement = document.getElementById('typewriter');
     if (!typewriterElement) {
@@ -58,7 +58,6 @@ function typeWriterEffect(text) {
     }
 
     let i = 0;
-
     function typeNextCharacter() {
         if (i < text.length) {
             typewriterElement.textContent += text.charAt(i);
@@ -68,20 +67,12 @@ function typeWriterEffect(text) {
             // Remove the border and animation from the typewriter element
             typewriterElement.style.borderRight = 'none';
             typewriterElement.style.animation = 'none';
+            startFireworks(); // Call startFireworks after typeWriterEffect
         }
     }
 
     typeNextCharacter();
 }
 
-
-
-
-
-
-
-
-// Call the function with the desired text
-typeWriterEffect('!!!!ألف مبروك عالتخرج دكتور حمزة');
-
-exampleFunction().then(() => startFireworks())
+// Start the sequence
+exampleFunction();
