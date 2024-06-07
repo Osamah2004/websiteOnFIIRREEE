@@ -9,7 +9,7 @@ async function exampleFunction() {
         jsConfetti.addConfetti();
         await sleep(200);
     }
-    typeWriterEffect('!!!الف مبروك عالتخرج دكتور حمزة!!!'); // Call typeWriterEffect after exampleFunction
+    typeWriterEffect('🔥🔥🔥الف مبروك عالتخرج دكتور حمزة🔥🔥🔥'); // Call typeWriterEffect after exampleFunction
 }
 
 function createFirework() {
