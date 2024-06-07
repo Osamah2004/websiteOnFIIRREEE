@@ -82,6 +82,6 @@ function typeWriterEffect(text) {
 
 
 // Call the function with the desired text
-typeWriterEffect('Hello, this is a typewriter effect!');
+typeWriterEffect('!!!!ألف مبروك عالتخرج دكتور حمزة');
 
 exampleFunction().then(() => startFireworks())
